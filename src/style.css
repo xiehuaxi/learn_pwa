@@ -24,7 +24,6 @@ header > .logo {
     --iconWidth: 25px;
     margin-right: var(--gap);
     padding-left: calc(var(--iconWidth) + 2px);
-    /* background: url(/img/book.png) 0 center no-repeat; */
     background: url('./img/book.png') 0 center no-repeat;
     background-size: var(--iconWidth);
     vertical-align: middle;
