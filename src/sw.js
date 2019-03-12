@@ -1,8 +1,8 @@
 /**
  * service worker
  */
-var cacheName = 'bs-3-2-7';
-var apiCacheName = 'api-0-1-1';
+var cacheName = 'bs-3-2-8';
+var apiCacheName = 'api-0-1-9';
 var cacheFiles = [
   '/',
   './index.html',
