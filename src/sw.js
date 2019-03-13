@@ -22,6 +22,19 @@ self.addEventListener('install', function(e) {
   console.log('service worker 状态： install');
 })
 
+self.addEventListener('activate', function (e) {
+  console.log('Service Worker 状态： activate');
+  var cachePromise = caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (key) {
+          if (key !== cacheName) {
+              return caches.delete(key);
+          }
+      }));
+  })
+  e.waitUntil(cachePromise);
+  return self.clients.claim();
+});
+
 
 self.addEventListener('fetch', function(e) {
   e.respondWith(
