@@ -24,6 +24,8 @@ self.addEventListener('install', function (e) {
   console.log('Service Worker 状态： install');
   var cacheOpenPromise = caches.open(cacheName).then(function (cache) {
       return cache.addAll(cacheFiles);
+  }).catch(function(err) {
+    console.log(err, 123456)
   });
   e.waitUntil(cacheOpenPromise);
 });
