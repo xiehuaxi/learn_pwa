@@ -1,6 +1,5 @@
 var cacheName = 'sw-1-0-0';
 var cacheFiles = [
-  '/',
   './index.html',
   './index.js',
   './style.css',
